@@ -1,0 +1,57 @@
+@mixin arrows($size){
+	width: #{$size}px;
+	height: #{$size}px;
+	border-top: .4rem solid $color2;
+	border-right: .4rem solid $color2;
+}
+.arrow{
+	position: absolute;
+	top: 50%;
+	background-color: transparent;
+	transition: 200ms ease;
+	z-index: 1;
+	border: none;
+	&:hover,&:focus{
+		border-color: $color1;
+	}
+	@include arrows(25);
+	&__left{
+		left: 5%;
+		transform: rotate(-135deg);
+	}
+	&__right{
+		right: 5%;
+		transform: rotate(45deg);
+	}
+
+	@include medium{
+		@include arrows(50);		
+	}
+	@include large{
+		@include arrows(70);		
+	}
+}
+
+.dot{
+		position: absolute;
+		z-index: 1;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+		
+		&__element{
+			width: 24px;
+			height: 24px;
+			margin: 5px;
+			border-radius: 50%;
+			background-color: $color2;
+			&:hover,&:focus{
+				background-color: $color1;
+			}
+			&--selected{
+				background-color: $color3;
+			}
+		}
+}

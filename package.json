@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/Ouraborus/upb-taller1#readme",
   "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
     "node-sass": "^4.7.2",
     "standard": "^10.0.3",
     "stylelint": "^8.3.1",
