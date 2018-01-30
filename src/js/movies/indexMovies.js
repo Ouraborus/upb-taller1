@@ -1,6 +1,8 @@
 import { MoviesFilter } from './moviesFilter.js'
 import { MoviesGrid } from './moviesGrid.js'
 import Controller from './Controller.js'
+import styles from '../../sass/main.scss'
+
 // import moviesData from './moviesData.js'
 
 const URL = 'https://api.myjson.com/bins/8pu21'

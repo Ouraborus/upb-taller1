@@ -4,11 +4,12 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 
 const config = {
-  entry: ['./src/js/movies/indexMovies.js','./src/js/gallery/index.js', './src/sass/main.scss'],
+  entry: {'indexMovies.js':'./src/js/movies/indexMovies.js',
+  'indexGallery.js':'./src/js/gallery/index.js'},
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: './[name]'
   },
   module: {
     rules: [
@@ -22,7 +23,7 @@ const config = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('style.css'),
+    new ExtractTextPlugin('styles.css'),
     new UglifyJsPlugin({
       uglifyOptions: {
         beautify: false,
@@ -32,8 +33,8 @@ const config = {
       }
     }),
     new HtmlWebpackPlugin({template: './src/index.html'}),
-    new HtmlWebpackPlugin({filename: 'gallery.html', template: './src/gallery.html'}),
-    new HtmlWebpackPlugin({filename: 'movies.html', template: './src/movies.html'})
+    new HtmlWebpackPlugin({filename: 'gallery.html', template: './src/gallery.html', chunks:['indexGallery.js']}),
+    new HtmlWebpackPlugin({filename: 'movies.html', template: './src/movies.html', chunks:['indexMovies.js']})
   ]
 }
 
