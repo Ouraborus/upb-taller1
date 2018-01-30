@@ -1,8 +1,8 @@
 export default [
-    {url: 'https://i.imgur.com/DrY1Vwo.jpg'},
-    {url: 'https://i.imgur.com/ibyOOxx.jpg'},
-    {url: 'https://i.imgur.com/UZZAq6I.jpg'},
-    {url: 'https://i.imgur.com/wcBQcfK.jpg'},
-    {url: 'https://i.imgur.com/ms3s5ZJ.jpg'},
-    {url: 'https://i.imgur.com/C2ocPfQ.jpg'}
+    {url: 'https://i.imgur.com/8xArzxK.jpg'},
+    {url: 'https://i.imgur.com/iVP03iP.jpg'},
+    {url: 'https://i.imgur.com/HLdkZQc.jpg'},
+    {url: 'https://i.imgur.com/tM061rk.jpg'},
+    {url: 'https://i.imgur.com/bdGJwxn.jpg'},
+    {url: 'https://i.imgur.com/ZeiK5dd.jpg'}
 ]

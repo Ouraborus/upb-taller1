@@ -4,7 +4,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 
 const config = {
-  entry: ['./src/js/gallery/index.js', './src/js/movies/indexMovies.js', './src/sass/main.scss'],
+  entry: ['./src/js/movies/indexMovies.js','./src/js/gallery/index.js', './src/sass/main.scss'],
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
