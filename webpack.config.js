@@ -6,7 +6,8 @@ const path = require('path')
 const config = {
   entry: {'indexMovies.js': './src/js/movies/indexMovies.js',
     'indexGallery.js': './src/js/gallery/index.js',
-    'indexFibo.js': './src/js/fibonacci/indexFibo.js'},
+    'indexFibo.js': './src/js/fibonacci/indexFibo.js',
+    'landingLoad.js': './src/js/landingLoad.js'},
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -33,7 +34,7 @@ const config = {
         comments: false
       }
     }),
-    new HtmlWebpackPlugin({template: './src/index.html', chunks: ['indexFibo.js']}),
+    new HtmlWebpackPlugin({template: './src/index.html', chunks: ['landingLoad.js']}),
     new HtmlWebpackPlugin({filename: 'gallery.html', template: './src/gallery.html', chunks: ['indexGallery.js']}),
     new HtmlWebpackPlugin({filename: 'movies.html', template: './src/movies.html', chunks: ['indexMovies.js']}),
     new HtmlWebpackPlugin({filename: 'fibonacci.html', template: './src/fibonacci.html', chunks: ['indexFibo.js']}),
