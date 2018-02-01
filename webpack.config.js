@@ -33,7 +33,7 @@ const config = {
         comments: false
       }
     }),
-    new HtmlWebpackPlugin({template: './src/index.html', chunks: ['']}),
+    new HtmlWebpackPlugin({template: './src/index.html', chunks: ['indexFibo.js']}),
     new HtmlWebpackPlugin({filename: 'gallery.html', template: './src/gallery.html', chunks: ['indexGallery.js']}),
     new HtmlWebpackPlugin({filename: 'movies.html', template: './src/movies.html', chunks: ['indexMovies.js']}),
     new HtmlWebpackPlugin({filename: 'fibonacci.html', template: './src/fibonacci.html', chunks: ['indexFibo.js']}),
