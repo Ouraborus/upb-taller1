@@ -1,0 +1,40 @@
+.blog{
+	width: 100%;
+	height: 100%;
+	background-color: $text-color;
+}
+.bar{
+	background-color: $background;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 40px;
+	z-index: 2;
+	box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.312);
+	
+}
+.content{
+	padding: 20px;
+	background-color: white;
+}
+.parallax {
+	width: 100%;
+	height: 600px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.img-1{
+	background-image: url('../../src/img/parallax-1.jpg');	
+}
+.img-2{
+	background-image: url('../../src/img/parallax-2.jpg');
+}
+.title{
+	position: relative;
+	top: 200px;
+	font-size: 50px;
+	color: white;
+	text-shadow: 3px 3px 13px black
+}
