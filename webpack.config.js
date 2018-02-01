@@ -4,9 +4,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const path = require('path')
 
 const config = {
-  entry: {'indexMovies.js':'./src/js/movies/indexMovies.js',
-  'indexGallery.js':'./src/js/gallery/index.js',
-  'indexFibo.js':'./src/js/fibonacci/indexFibo.js'},
+  entry: {'indexMovies.js': './src/js/movies/indexMovies.js',
+    'indexGallery.js': './src/js/gallery/index.js',
+    'indexFibo.js': './src/js/fibonacci/indexFibo.js'},
   devtool: 'inline-source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -33,10 +33,11 @@ const config = {
         comments: false
       }
     }),
-    new HtmlWebpackPlugin({template: './src/index.html'}),
-    new HtmlWebpackPlugin({filename: 'gallery.html', template: './src/gallery.html', chunks:['indexGallery.js']}),
-    new HtmlWebpackPlugin({filename: 'movies.html', template: './src/movies.html', chunks:['indexMovies.js']}),
-    new HtmlWebpackPlugin({filename: 'fibonacci.html', template: './src/fibonacci.html', chunks:['indexFibo.js']})
+    new HtmlWebpackPlugin({template: './src/index.html', chunks: ['']}),
+    new HtmlWebpackPlugin({filename: 'gallery.html', template: './src/gallery.html', chunks: ['indexGallery.js']}),
+    new HtmlWebpackPlugin({filename: 'movies.html', template: './src/movies.html', chunks: ['indexMovies.js']}),
+    new HtmlWebpackPlugin({filename: 'fibonacci.html', template: './src/fibonacci.html', chunks: ['indexFibo.js']}),
+    new HtmlWebpackPlugin({filename: 'blog.html', template: './src/blog.html', chunks: ['']})
   ]
 }
 
