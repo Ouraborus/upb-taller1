@@ -1,6 +1,4 @@
 .landing, body {
-	width: 100%;
-	height: 100vh;
 	background: $color4;
 
 	&__element{
@@ -13,9 +11,11 @@
 		}
 	}
 	&__flex{
-		align-items: center;	
+		width: 100%;
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
+		align-items: center;	
 		justify-content: center;
 	}
 }
